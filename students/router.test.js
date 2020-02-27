@@ -8,20 +8,14 @@ describe('cohorts router', function() {
 
     describe('GET /', function() {
         it('should return 200 OK', function() {
-            return request(server).get('/api/cohorts').then(res => {
+            return request(server).get('/api/students').then(res => {
                 expect(res.status).toBe(200);
             });
         });
 
         it('should return cohorts as the router', function() {
-            return request(server).get('/api/cohorts').then(res => {
-                expect(res.body.router).toBe('Cohorts');
-            });
-        });
-
-        it('should return JSON formatted body', function() {
-            return request(server).get('/api/cohorts').then(res => {
-                expect(res.type).toMatch(/json/);
+            return request(server).get('/api/students').then(res => {
+                expect(res.body.router).toBe('Students');
             });
         });
     });

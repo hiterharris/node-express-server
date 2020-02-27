@@ -18,7 +18,7 @@ server.use('/api/cohorts', cohortsRouter);
 server.use('/api/students', studentsRouter);
 
 server.get('/', (req, res) => {
-    res.json('Server up and running');
+    res.json('API up and running');
 });
 
 module.exports = server;
